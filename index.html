@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./vendor/owl/css/owl.css">
     <link rel="stylesheet" href="./vendor/fontawesome/fontawesome.css">
+    <link rel="stylesheet" href="./vendor/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>jQuery</title>
+    <title>Sushi - Delivery comida japonesa</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top ">
@@ -25,13 +26,13 @@
                         </a>    
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="products.html">Produtos</a>
+                        <a class="nav-link" href="#featured">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link">Sobre nós</a>
+                        <a class="nav-link nav-modal-open" href="#sobre" rel="sobre">Sobre nós</a>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contato</a>
+                        <a class="nav-link nav-modal-open" href="#contato" rel="contato">Contato</a>
                     </li>    
                 </ul>
             </div>        
@@ -42,7 +43,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="caption">
-                        <h2>Ecommerce HTML Template</h2>
+                        <h2>Sushi comida japonesa de qualidade
+                        </h2>
                         <div class="line-dec"></div>
                         <p>HTML Template can be converted into your desires CMS theme.</p>
                     </div>
@@ -62,7 +64,7 @@
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
                         <div class="featured-item">
-                            <img src="assets/images/prato-1.jpg" alt="Item 1">
+                            <img src="assets/images/prato-01.jpg" alt="Item 1">
                             <h4>Produto 1</h4>
                             <h6>R$ 20,00</h6>
                             <a href="single-product.html">
@@ -70,7 +72,7 @@
                             </a>
                         </div>
                         <div class="featured-item">
-                            <img src="assets/images/prato-2.jpg" alt="Item 2">
+                            <img src="assets/images/prato-02.jpg" alt="Item 2">
                             <h4>Produto 2</h4>
                             <h6>R$ 20,00</h6>
                             <a href="single-product.html">
@@ -78,7 +80,7 @@
                             </a>
                         </div>
                         <div class="featured-item">
-                            <img src="assets/images/prato-3.jpg" alt="Item 3">
+                            <img src="assets/images/prato-03.jpg" alt="Item 3">
                             <h4>Produto 3</h4>
                             <h6>R$ 20,00</h6>
                             <a href="single-product.html">
@@ -86,7 +88,7 @@
                             </a>
                         </div>
                         <div class="featured-item">
-                            <img src="assets/images/prato-4.jpg" alt="Item 4">
+                            <img src="assets/images/prato-04.jpg" alt="Item 4">
                             <h4>Produto 4</h4>
                             <h6>R$ 20,00</h6>
                             <a href="single-product.html">
@@ -94,7 +96,7 @@
                             </a>
                         </div>
                         <div class="featured-item">
-                            <img src="assets/images/prato-5.jpg" alt="Item 5">
+                            <img src="assets/images/prato-05.jpg" alt="Item 5">
                             <h4>Produto 5</h4>
                             <h6>R$ 20,00</h6>
                             <a href="single-product.html">
@@ -102,7 +104,7 @@
                             </a>
                         </div>
                         <div class="featured-item">
-                            <img src="assets/images/prato-6.jpg" alt="Item 6">
+                            <img src="assets/images/prato-06.jpg" alt="Item 6">
                             <h4>Produto 6</h4>
                             <h6>R$ 20,00</h6>
                             <a href="single-product.html">
@@ -110,7 +112,15 @@
                             </a>
                         </div>
                         <div class="featured-item">
-                            <img src="assets/images/prato-7.jpg" alt="Item 7">
+                            <img src="assets/images/prato-07.jpg" alt="Item 7">
+                            <h4>Produto 7</h4>
+                            <h6>R$ 20,00</h6>
+                            <a href="single-product.html">
+                                Comprar
+                            </a>
+                        </div>
+                        <div class="featured-item">
+                            <img src="assets/images/prato-08.jpg" alt="Item 8">
                             <h4>Produto 8</h4>
                             <h6>R$ 20,00</h6>
                             <a href="single-product.html">
@@ -118,15 +128,7 @@
                             </a>
                         </div>
                         <div class="featured-item">
-                            <img src="assets/images/prato-8.jpg" alt="Item 8">
-                            <h4>Produto 8</h4>
-                            <h6>R$ 20,00</h6>
-                            <a href="single-product.html">
-                                Comprar
-                            </a>
-                        </div>
-                        <div class="featured-item">
-                            <img src="assets/images/prato-9.jpg" alt="Item 9">
+                            <img src="assets/images/prato-09.jpg" alt="Item 9">
                             <h4>Produto 9</h4>
                             <h6>R$ 20,00</h6>
                             <a href="single-product.html">
@@ -137,7 +139,40 @@
                 </div>         
             </div>
         </div>
-    </div> 
+    </div>
+    <div class="subscribe-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <div class="line-dec"></div>
+                        <h1>Receba novidades</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 offset-md-2">
+                <div class="main-content">
+                    <p>Insira seus dados abaixo para receber informações atualizadas de nossos produtos</p>
+                    <div class="container">
+                        <form id="subscribe" class="form" action="" method="get">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <fieldset>
+                                        <input name="email" type="text" class="form-control" id="email" placeholder="Seu e-mail...">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-5">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="button">Inscreva-se</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>     
     <div class="footer">
         <div class="container">
             <div class="row">
@@ -149,11 +184,10 @@
                 <div class="col-md-12">
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">How It Works?</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#top">Home</a></li>
+                            <li><a href="#featured">Produtos</a></li>
+                            <li><a href="#sobre" rel="sobre" class="nav-modal-open">Sobre</a></li>
+                            <li><a href="#contato" rel="contato" class="nav-modal-open">Contato</a></li>
                         </ul>
                     </div>
                 </div>
@@ -181,9 +215,93 @@
             </div>
         </div>
     </div>
+    
+    <!-- Modal Body -->
+    <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contato" class="visually-hidden"> <!-- visually-hidden oculta o form da página-->
+        
+        <form action="post" class="form">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome" aria-describedby="helpNome" >
+                <small id="helpNome" class="text-muted">
+                    Digite um nome válido
+                </small>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" name="email" id="email" class="form-control" placeholder="Digite seu e-mail" aria-describedby="helpEmail" >
+                <small id="helpEmail" class="text-muted">
+                    Digite um e-mail válido
+                </small>
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label">Data</label>
+                <input type="text" name="date" id="date" class="form-control" placeholder="digite a Data" aria-describedby="helpData">
+                <small id="helpData" class="text-muted">
+                    Digite uma Data válida
+                </small>    
+            </div>
+            
+            <div class="mb-3">
+                <label for="time" class="form-label">Hora</label>
+                <input type="text" name="time" id="time" class="form-control" placeholder="digite a hora" aria-describedby="helpHora">
+                <small id="helpHora" class="text-muted">
+                    Digite uma hora válida
+                </small>    
+            </div>
+            
+            <div class="mb-3">
+                <label for="cep" class="form-label">Cep</label>
+                <input type="text" name="cep" id="cep" class="form-control" placeholder="Digite seu Cep" aria-describedby="helpCep" >
+                <small id="helpCep" class="text-muted">
+                    Digite um Cep válido
+                </small>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Celular</label>
+                <input type="text" name="phone" id="phone" class="form-control" placeholder="Digite seu Celular" aria-describedby="helpCelular" >
+                <small id="helpCelular" class="text-muted">
+                    Digite um Celular válido
+                </small>
+            </div>
+            <div class="mb-3">
+                <label for="cpf" class="form-label">Cpf</label>
+                <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu Cpf" aria-describedby="helpCpf" required>
+                <small id="helpCpf" class="text-muted">
+                    Digite um Cpf válido
+                </small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+    </div>
+
+    <div id="sobre" class="visually-hidden">
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, laborum voluptatum! Numquam doloribus voluptatibus temporibus voluptatem repudiandae, assumenda, unde aut sapiente ullam quod consectetur ipsa asperiores doloremque, totam officiis adipisci.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, velit impedit esse sunt quisquam tenetur fugit reiciendis fugiat accusantium odio in a ullam recusandae? Unde consequuntur nesciunt iusto voluptates excepturi?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem sed commodi impedit accusamus, eveniet culpa. Reiciendis maiores harum officia, dolores eum velit odit dignissimos error delectus adipisci culpa architecto quibusdam?</p>
+    </div>
+    
     <script src="./vendor/jquery/jquery-3.6.1.min.js"></script>
     <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="./vendor/owl/js/owl.js"></script>
+    <script src="./vendor/jquery-mask/jquery.mask.min.js"></script>
+    <script src="./vendor/jquery-ui/jquery-ui.min.js"></script>
     <script src="./js/custom.js"></script>
 </body>
 </html>

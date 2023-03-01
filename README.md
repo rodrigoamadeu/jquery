@@ -1,5 +1,5 @@
 # jQuery
-"write less, do more"
+"write less, do more" - escrever menos fazer mais
 - Biblioteca de JavaScript
 - Carregamento rápido
 - Converte para JS (ECMAScript) padrão
@@ -12,6 +12,8 @@
 - Instalação: https://jquery.com/download/
 
 ## Seletores
+
+
 ### Simples
 ```
     $('h4') // seletor de tag

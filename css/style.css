@@ -76,7 +76,7 @@ a {
 	z-index: 999;
 	position: absolute;
 	left: 50%;
-	top: 105px;
+	top: 128px;
 	transform: translateX(-50%);
 }
 .navbar-dark .navbar-nav .nav-item {
@@ -242,6 +242,7 @@ a {
 	color: #fff;
 	outline: none;
 }
+
 .subscribe-form .main-content form button:focus {
 	color: #fff!important;
 }
@@ -737,4 +738,25 @@ a {
 		text-align: left;
 	} 
 
+}
+
+input::placeholder {
+	color: #fff;
+}
+
+#email {
+	position: relative;
+}
+
+.mensagem {
+	font-size: 2rem;
+	text-align: center;
+}
+
+.invalid {
+	border-color: #f00;
+}
+
+.text-muted {
+	display: none;
 }

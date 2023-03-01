@@ -139,37 +139,35 @@ $(document).ready(function(){
 
        myModal.show() // e coloca opção para exibir o modal
 
+
     })
+
     
 
     function validate( elem ) { // faz a validação no blur, quando tirado o cursor de dentro do elemento
         if( elem.val () == '' ) {
             console.log(' o campo de ' + elem.attr('name') + ' é obrigatório')
 
-            elem.parent().find('.text-muted').show()
-
             elem.addClass('invalid')
             return false
 
         } else {
-            elem.parent().find('.text-muted').hide()
             elem.removeClass('invalid')
         }
     }
 
+    function validaNome()
 
     $('body').on('submit', '.modal-body .form', function(e){ // pegando evento com o jQuery para diminuir o tamanho do código. primeiro a classe depois o submit que é o botão e depois a função para controle total das ações da função e depois passa o  e.preventDefault
         e.preventDefault()
 
         const inputName = $('#nome')
         const inputEmail = $('#email')
-        const inputCpf = $('#cpf')
 
         validate(inputName) // faz a validação do campo name também aqui na 'submit'
         validate(inputEmail)// faz a validação do campo email também aqui no 'submit' 
-        validate(inputCpf)
 
-        if(inputCpf.hasClass('invalid') || inputEmail.hasClass('invalid') || inputName.hasClass('invalid')){ // se algum dos inputs tiverem .hasClass('invalid') retorna false e volta para verificação do preenchimento novamente até estar preenchido e passar esse if
+        if(inputEmail.hasClass('invalid') || inputName.hasClass('invalid')){
             console.log('verificar campos obrigatórios')
             return false
         } else {
@@ -184,35 +182,6 @@ $(document).ready(function(){
 
     $('body').on('blur', '#email', function(){
         validate($(this))
-    })
-
-    $('body').on('focus', '#date', function(){
-        $(this).datepicker();
-    })
-
-    $('body').on('blur', '#date', function(){
-        validate($(this))
-        $(this).mask('00/00/000');
-    })
-
-    $('body').on('blur', '#time', function(){
-        validate($(this))
-        $(this).mask('00:00');
-    })
-
-    $('body').on('blur', '#cep', function(){
-        validate($(this))
-        $(this).mask('00000-000');
-    })
-
-    $('body').on('blur', '#phone', function(){
-        validate($(this))
-        $(this).mask('00000-0000');
-    })
-
-    $('body').on('blur', '#cpf', function(){
-        validate($(this))
-        $(this).mask('000.000.000-00');
     })
 
 })
