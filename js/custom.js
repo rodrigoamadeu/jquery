@@ -157,19 +157,36 @@ $(document).ready(function(){
         }
     }
 
+    function validaEmail(elem ) { // faz a validação no blur, quando tirado o cursor de dentro do elemento
+
+        const inputEmail=/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
+
+        if( elem.val () !== inputEmail ) {
+            console.log(' o campo de ' + ('#email') + ' deverá ser preenchido conforme modelo')
+
+            elem.parent().find('.text-muted').show()
+        
+            elem.addClass('invalid')
+            return false
+
+        } else {
+            elem.parent().find('.text-muted').hide()
+            elem.removeClass('invalid')
+        }
+    }
+
 
     $('body').on('submit', '.modal-body .form', function(e){ // pegando evento com o jQuery para diminuir o tamanho do código. primeiro a classe depois o submit que é o botão e depois a função para controle total das ações da função e depois passa o  e.preventDefault
         e.preventDefault()
 
         const inputName = $('#nome')
-        const inputEmail = $('#email')
         const inputCpf = $('#cpf')
 
         validate(inputName) // faz a validação do campo name também aqui na 'submit'
-        validate(inputEmail)// faz a validação do campo email também aqui no 'submit' 
         validate(inputCpf)
+        
 
-        if(inputCpf.hasClass('invalid') || inputEmail.hasClass('invalid') || inputName.hasClass('invalid')){ // se algum dos inputs tiverem .hasClass('invalid') retorna false e volta para verificação do preenchimento novamente até estar preenchido e passar esse if
+        if(inputCpf.hasClass('invalid') || inputName.hasClass('invalid')){ // se algum dos inputs tiverem .hasClass('invalid') retorna false e volta para verificação do preenchimento novamente até estar preenchido e passar esse if
             console.log('verificar campos obrigatórios')
             return false
         } else {
@@ -177,13 +194,13 @@ $(document).ready(function(){
         }
 
     })
-
+    
     $('body').on('blur', '#nome', function(){
         validate($(this))
     })
 
-    $('body').on('blur', '#email', function(){
-        validate($(this))
+    $('body').on('submit', '#email', function(){
+        validaEmail($('#email'))
     })
 
     $('body').on('focus', '#date', function(){
